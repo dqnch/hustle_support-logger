@@ -1,3 +1,4 @@
+require 'rails_ext/action_dispatch/debug_exceptions'
 require 'hustle_logger/engine'
 require 'ougai'
 

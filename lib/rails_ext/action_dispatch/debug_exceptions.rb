@@ -1,6 +1,8 @@
 class ActionDispatch::DebugExceptions
   private
 
+  alias org_log_error log_error
+
   def log_error(request, wrapper)
     if demote?(wrapper.exception)
       Rails.logger.info(wrapper.exception.message)
@@ -8,7 +10,6 @@ class ActionDispatch::DebugExceptions
       org_log_error request, wrapper
     end
   end
-  alias org_log_error log_error
 
   def demote?(exception)
     demoted_exceptions = [ActionController::RoutingError]
