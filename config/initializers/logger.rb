@@ -17,7 +17,7 @@ Rails.application.configure do
   config.lograge.custom_options = lambda do |event|
     exceptions = %w[controller action format id]
     {
-      backtrace: event.payload[:exception_object].try(:backtrace),
+      backtrace: event.payload[:exception_object].try(:backtrace).try(:[], 1..10),
       params: event.payload[:params].except(*exceptions)
     }
   end
