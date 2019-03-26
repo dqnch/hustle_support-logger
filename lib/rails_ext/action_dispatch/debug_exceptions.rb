@@ -30,7 +30,6 @@ class ActionDispatch::DebugExceptions
   end
 
   def demote?(exception)
-    demoted_exceptions = [ActionController::RoutingError]
-    exception.class.in?(demoted_exceptions)
+    exception.class.in?(HustleLogger.demoted_exceptions)
   end
 end
