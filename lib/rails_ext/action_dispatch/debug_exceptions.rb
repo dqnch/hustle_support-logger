@@ -5,7 +5,7 @@ class ActionDispatch::DebugExceptions
 
   def log_error(request, wrapper)
     if demote?(wrapper.exception)
-      Rails.logger.info(wrapper.exception.message)
+      Rails.logger.warn(wrapper.exception.message)
     else
       org_log_error request, wrapper
     end
