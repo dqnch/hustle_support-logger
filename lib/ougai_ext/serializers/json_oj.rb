@@ -6,7 +6,8 @@ module Ougai::Formatters::ForJson
     convert_time(data)
     str = begin
             @serializer.serialize(data)
-          rescue Encoding::UndefinedConversionError
+          rescue Encoding::UndefinedConversionError => ex
+            data[:msg] = ex.to_s
             @serializer.serialize(data)
           end
     str << "\n" if @with_newline
