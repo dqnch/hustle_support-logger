@@ -8,12 +8,7 @@ module HustleLogger
 
   class Logger < Ougai::Logger
     include ActiveSupport::LoggerThreadSafeLevel
-    include LoggerSilence
-
-    def initialize(*args)
-      super
-      after_initialize if respond_to? :after_initialize
-    end
+    include ActiveSupport::LoggerSilence
 
     def create_formatter
       if Rails.env.development? || Rails.env.test?
