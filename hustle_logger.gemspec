@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'awesome_print'
   s.add_dependency 'lograge'
   s.add_dependency 'ougai'
-  s.add_dependency 'rails', '~> 6.0.0'
+  s.add_dependency 'rails', '~> 6.0'
 
   s.add_development_dependency 'rspec-rails'
 end

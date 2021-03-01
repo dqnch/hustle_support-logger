@@ -1,3 +1,3 @@
 module HustleLogger
-  VERSION = '1.1.0'.freeze
+  VERSION = '6.1.0'.freeze
 end
