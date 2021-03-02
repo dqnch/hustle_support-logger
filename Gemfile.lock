@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     hustle_logger (6.1.0)
+      amazing_print
       awesome_print
       lograge
       ougai
@@ -69,6 +70,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    amazing_print (1.2.2)
     awesome_print (1.8.0)
     builder (3.2.4)
     concurrent-ruby (1.1.8)
